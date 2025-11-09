@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="O’Keefe Family & Divorce Law – Competent, aggressive, and successful representation in divorce, child custody, family law, and property tax appeals in La Grange, IL." />
+  <meta name="description" content="O’Keefe Family & Divorce Law – Competent, aggressive representation in divorce, family law, and property tax appeals in La Grange, IL." />
   <title>O’Keefe Family & Divorce Law | La Grange, IL</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- Simple CSS Reset + Styles -->
+  <!-- Olive-Green Theme CSS -->
   <style>
     :root {
-      --primary: #1a3d7c;
-      --secondary: #e8b923;
-      --light: #f8f9fa;
-      --dark: #212529;
+      --primary: #5D6D4E;      /* Deep olive */
+      --secondary: #A68A64;    /* Warm gold-tan */
+      --light: #F5F5F0;        /* Soft cream */
+      --dark: #2D2D2D;         /* Charcoal */
       --gray: #6c757d;
     }
     * { margin:0; padding:0; box-sizing:border-box; }
@@ -33,26 +33,82 @@
     header, footer { background: var(--primary); color: #fff; padding: 1.5rem 0; }
     nav ul { list-style: none; display: flex; gap: 1.5rem; flex-wrap: wrap; }
     nav a { color: #fff; font-weight: 600; }
+    nav a:hover { color: var(--secondary); }
     .container { max-width: 1100px; margin: auto; padding: 0 1rem; }
-    .hero { background: linear-gradient(rgba(26,61,124,0.8), rgba(26,61,124,0.8)), url('https://images.unsplash.com/photo-1589820289829-2d7cc2e3c8a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover; color: #fff; text-align: center; padding: 4rem 1rem; }
-    .btn {
-      display: inline-block; background: var(--secondary); color: #fff; padding: 0.75rem 1.5rem; border-radius: 5px; font-weight: 600; margin-top: 1rem; transition: 0.3s;
+
+    /* Hero with Olive Overlay */
+    .hero {
+      background: linear-gradient(rgba(93, 109, 78, 0.88), rgba(93, 109, 78, 0.88)),
+                  url('https://images.unsplash.com/photo-1589820289829-2d7cc2e3c8a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover;
+      color: #fff;
+      text-align: center;
+      padding: 4rem 1rem;
     }
-    .btn:hover { background: #d4a017; transform: translateY(-2px); }
+
+    .btn {
+      display: inline-block;
+      background: var(--secondary);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      font-weight: 600;
+      margin-top: 1rem;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #8e774f;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
     section { padding: 3rem 0; }
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem; }
-    .card { background: #fff; border: 1px solid #eee; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-    .card h3 { margin-bottom: 0.75rem; }
+    section:nth-child(even) { background: var(--light); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #e8e5d9;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      transition: transform 0.2s;
+    }
+    .card:hover { transform: translateY(-4px); }
+    .card h3 { margin-bottom: 0.75rem; color: var(--primary); }
+
     .faq { background: var(--light); }
     .faq details { margin-bottom: 1rem; }
-    .faq summary { font-weight: 600; cursor: pointer; }
+    .faq summary { font-weight: 600; cursor: pointer; color: var(--primary); }
+
     form { display: grid; gap: 1rem; max-width: 600px; margin: auto; }
-    input, textarea, select { padding: 0.75rem; border: 1px solid #ccc; border-radius: 5px; width: 100%; }
+    input, textarea, select {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+      font-family: inherit;
+    }
+    input:focus, textarea:focus, select:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px rgba(93,109,78,0.2);
+    }
+
     footer { text-align: center; font-size: 0.9rem; }
     .footer-links a { color: #ccc; margin: 0 0.5rem; }
+    .footer-links a:hover { color: var(--secondary); }
+
     ol { max-width:700px; margin:1rem auto; padding-left:1.5rem; }
+    ol li { margin-bottom: 0.5rem; }
+
     @media (max-width: 768px) {
       nav ul { flex-direction: column; align-items: center; }
+      .hero { padding: 3rem 1rem; }
     }
   </style>
 </head>
@@ -104,7 +160,7 @@
   </section>
 
   <!-- Family Law Section -->
-  <section id="family-law" style="background:#f9f9fb;">
+  <section id="family-law">
     <div class="container">
       <h2>Family Law Services</h2>
       <p>We guide Illinois families through life’s most sensitive legal challenges with clarity and confidence.</p>
@@ -175,7 +231,7 @@
   </section>
 
   <!-- Property Tax Appeal Section -->
-  <section id="tax-appeal" style="background:#f9f9fb;">
+  <section id="tax-appeal">
     <div class="container">
       <h2>Property Tax Appeals</h2>
       <p>Overassessed property taxes can strain family budgets—especially during divorce, relocation, or estate transitions. At O’Keefe, we aggressively fight for reductions in Cook County’s southwestern suburbs, leveraging our deep local knowledge to safeguard your assets and deliver real savings.</p>
@@ -249,7 +305,7 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" style="background:#1a3d7c; color:#fff;">
+  <section id="contact" style="background:var(--primary); color:#fff;">
     <div class="container">
       <h2 style="color:#fff; text-align:center;">Contact Us Today</h2>
       <p style="text-align:center; max-width:700px; margin:auto;">
@@ -274,8 +330,8 @@
 
       <div style="margin-top:2rem; text-align:center; font-size:1.1rem;">
         <p><strong>Office:</strong> 72 S. La Grange Rd, Suite 8, La Grange, IL 60525</p>
-        <p><strong>Phone:</strong> <a href="tel:+17085551234" style="color:#e8b923;">(708) 555-1234</a></p>
-        <p><strong>Email:</strong> <a href="mailto:info@okeefelawfirm.com" style="color:#e8b923;">info@okeefelawfirm.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+17085551234" style="color:#A68A64;">(708) 555-1234</a></p>
+        <p><strong>Email:</strong> <a href="mailto:info@okeefelawfirm.com" style="color:#A68A64;">info@okeefelawfirm.com</a></p>
         <p><strong>Hours:</strong> Mon–Fri: 9:00 AM – 5:00 PM</p>
       </div>
     </div>
@@ -284,7 +340,7 @@
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>&copy; <span id="year"></span> O’Keefe Family & Divorce Law. All rights reserved. Not affiliated with O’Keefe, Lyons and Hynes, LLC.</p>
+      <p>&copy; <span id="year"></span> O’Keefe Family & Divorce Law. All rights reserved.</p>
       <div class="footer-links">
         <a href="#">Privacy Policy</a> | <a href="#">Disclaimer</a>
       </div>
